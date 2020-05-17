@@ -1,0 +1,30 @@
+<h1>Write a Review!</h1>
+
+
+<form action="/reviews" method="POST">
+  <p>
+    <label name="restaurant[name]">Restaurant name:</label>
+    <input name="restaurant[name]" type="text"/>
+  </p>
+   <p>
+    <label name="city[name]">City</label>
+    <input name="city[name]" type="text"/>
+  </p>
+   <p>
+    <label name="city[state]">State</label>
+    <input name="city[state]" type="text"/>
+  </p>
+
+  <p>
+    <label name="review[rating]">Rating (out of 5)</label>
+    <input name="review[rating]" type="text"/>
+  </p>
+  <p>
+    <label name="review[content]">Tell us about your experience</label>
+    <input name="review[content]" type="text"/>
+  </p>
+
+  <p>
+    <input type="submit" value="Review"/>
+  </p>
+</form>
