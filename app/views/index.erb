@@ -1,17 +1,22 @@
-<h1> Restaurant Reviewer! </h1>
+<h1> Food Review! </h1>
 
 <form action="sessions" method="post">
   <p>
-    <label name="user[username]">Username</label>
+    <label name="user[username]">Username:</label>
     <input name="user[username]" type="text"/>
   </p>
+
   <p>
-    <label name="user[password]">Password</label>
+    <label name="user[password]">Password:</label>
     <input name="user[password]" type="password"/>
   </p>
+
   <p>
-    <input type="submit"/>
+    <input type="submit" value="Sign In"/>
   </p>
+
 </form>
 
-<a href="/users/new">Sign up here</a>
+
+<p> Not a member? Create a new account below:</p>
+<a href="/users/new">Sign up!</a>
