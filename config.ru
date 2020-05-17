@@ -1,4 +1,6 @@
 require_relative './config/environment'
+require_relative './app/controllers/reviews_controller'
+require_relative './app/controllers/users_controller'
 
 require './config/environment'
 
@@ -7,6 +9,6 @@ require './config/environment'
 # end
 #
 # use Rack::MethodOverride
-# use ReviewsController
-# use UsersController
+use ReviewsController
+use UsersController
 run ApplicationController
