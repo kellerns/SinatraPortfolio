@@ -3,7 +3,6 @@ class CreateCities < ActiveRecord::Migration
     create_table :cities do |t|
       t.string :name
       t.string :state
-
     end
   end
 end

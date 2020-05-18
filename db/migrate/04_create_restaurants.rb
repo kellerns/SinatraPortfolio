@@ -3,7 +3,6 @@ class CreateRestaurants < ActiveRecord::Migration
     create_table :restaurants do |t|
       t.string :name
       t.belongs_to :city
-
     end
   end
 end

@@ -1,5 +1,10 @@
 class ReviewsController < Sinatra::Base
 
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+  end
+
   get '/reviews' do
     # @user = User.find(session[:user_id])
     @reviews = Review.all
@@ -28,14 +33,5 @@ class ReviewsController < Sinatra::Base
     @review = Review.find(params[:review_id])
     "Edit review"
   end
-
-
-
-
-
-
-
-
-
 
 end

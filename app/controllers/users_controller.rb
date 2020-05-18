@@ -1,5 +1,10 @@
 class UsersController < Sinatra::Base
 
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+  end
+
   get '/users/new' do
     erb :create_user
   end
