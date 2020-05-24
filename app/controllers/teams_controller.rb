@@ -1,9 +1,13 @@
 class TeamsController < ApplicationController
 
   get '/teams' do
-    @teams = Team.all
-    #render the index view
-    erb :"teams/index"
+    if logged_in?
+      @teams = current_user.teams
+      #render the index view
+      erb :"teams/index"
+    else
+      redirect '/login'
+    end
   end
 
   get '/teams/new' do
