@@ -2,13 +2,7 @@
 <br>
 
 <form method="POST" action="/teams">
-  <label>Select User:</label>
-  <select name="user_id">
-    <% @users.each do |user| %>
-      <option value="<%= user.id %>"><%= user.name %></option>
-    <% end %>
-  </select>
-  <br>
+
   <label>Team Name:</label>
   <input type="text" name="name">
   <br>
