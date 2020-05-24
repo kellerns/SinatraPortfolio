@@ -11,23 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 20200524133310) do
 
-  create_table "restaurants", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
-    t.text    "content"
-    t.integer "restaurant_id"
+  create_table "teams", force: :cascade do |t|
+    t.string  "name"
+    t.string  "league"
+    t.string  "quarterback"
+    t.string  "running_back_one"
+    t.string  "wide_reciever_one"
+    t.string  "running_back_two"
+    t.string  "wide_reciever_two"
+    t.string  "tight_end"
+    t.string  "kicker"
+    t.string  "defense"
+    t.integer "wins"
+    t.integer "losses"
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
-    t.string "password_digest"
+    t.string "password"
   end
 
 end
