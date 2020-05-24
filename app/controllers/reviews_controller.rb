@@ -7,8 +7,14 @@ class ReviewsController < ApplicationController
 
   get '/reviews' do
     # @user = User.find(session[:user_id])
-    @reviews = Review.all
-    erb :review
+    @restaurants = Restaurant.all
+    erb :"reviews/index"
+  end
+
+  get '/reviews/:id' do
+    @review = Review.find_by_id(params[:id])
+    if @review
+      erb :"reviews/show"
   end
 
   get '/reviews/new' do

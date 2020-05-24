@@ -1,0 +1,13 @@
+<h2>Your Reviews</h2>
+
+<p><a href='/reviews/new'>Review a restaurant</a>
+<p><a href='/users/:user_id/reviews'>View and edit your previous reviews</a>
+<p><a href="/logout">Logout</a>
+<br>
+<br>
+<h3>Here are all restaurants with reviews:</h3>
+<ul>
+  <% @restaurants.each do |r| %>
+    <p><a href="/reviews/<%= r.id %>"><%=r.name%></a></p>
+  <%end%>
+</ul>
