@@ -1,13 +1,13 @@
 # SinatraPortfolio
 Sinatra Portfolio Project for 0323
 
-get /reviews/new - new
-post /reviews - create
+get /teams/new - new
+post /teams - create
 
-get /reviews - index
-get /reviews/:id - show
+get /teams - index
+get /teams/:id - show
 
-get /reviews/:id/edit - edit
-patch /reviews/:id - update
+get /teams/:id/edit - edit
+patch /teams/:id - update
 
-delete /reviews/:id - delete
+delete /teams/:id - delete

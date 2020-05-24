@@ -1,0 +1,6 @@
+<h2> Fantasy Football Teams </h2>
+<br>
+
+<% @posts.each do |t| %>
+  <p><a href="/posts/<%= t.id %>"><%= t.name %></a></p>
+<% end %>
