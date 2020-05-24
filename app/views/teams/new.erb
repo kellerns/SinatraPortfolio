@@ -1,0 +1,50 @@
+<h2> Create a new team</h2>
+<br>
+
+<form method="POST" action="/teams">
+  <label>Select User:</label>
+  <select name="user_id">
+    <% @users.each do |user| %>
+      <option value="<% user.id %>"><%= user.name %></option>
+    <% end %>
+  </select>
+  <br>
+  <label>Team Name:</label>
+  <input type="text" name="name">
+  <br>
+  <label>League Name:</label>
+  <input type="text" name="league">
+  <br>
+  <label>Quarterback:</label>
+  <input type="text" name="quarterback">
+  <br>
+  <label>Running Back:</label>
+  <input type="text" name="running_back_one">
+  <br>
+  <label>Running Back:</label>
+  <input type="text" name="running_back_two">
+  <br>
+  <label>Wide Receiver:</label>
+  <input type="text" name="wide_receiver_one">
+  <br>
+  <label>Wide Receiver:</label>
+  <input type="text" name="wide_receiver_two">
+  <br>
+  <label>Tight End:</label>
+  <input type="text" name="tight_end">
+  <br>
+  <label>Kicker:</label>
+  <input type="text" name="kicker">
+  <br>
+  <label>Defense:</label>
+  <input type="text" name="defense">
+  <br>
+  <label>Wins:</label>
+  <input type="integer" name="wins">
+  <br>
+  <label>Losses:</label>
+  <input type="integer" name="losses">
+  <br>
+  <input type="submit">
+
+</form>

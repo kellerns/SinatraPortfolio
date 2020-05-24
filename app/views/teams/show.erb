@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <!-- <% wins = @team.wins.to_s %>
   <% losses = @team.losses.to_s %> -->
-  <title><%= @team.name @team.wins - @team.losses %></title>
+  <title><%= @team.name %></title>
  </head>
  <body>
-   <h1>League Name: <%= @team.league %></h2>
+   <h1>League: <%= @team.league %></h1>
+   <h1>Team Name: <%= @team.name %></h1>
+   <h2>Record: <%= @team.wins %>-<%= @team.losses %></h2>
    <h2>Quarterback: <%= @team.quarterback %></h2>
    <h2>Running Back: <%= @team.running_back_one %></h2>
    <h2>Running Back: <%= @team.running_back_two %></h2>

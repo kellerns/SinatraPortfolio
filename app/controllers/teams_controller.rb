@@ -6,6 +6,16 @@ class TeamsController < ApplicationController
     erb :"teams/index"
   end
 
+  get '/teams/new' do
+    @users = User.all
+    #render the new view
+    erb :"teams/new"
+  end
+
+  post '/teams' do
+
+  end
+
   get'/teams/:id' do
     @team = Team.find_by_id(params[:id])
     if @team
