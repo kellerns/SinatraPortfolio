@@ -4,3 +4,8 @@
 <% @teams.each do |t| %>
   <p><a href="/teams/<%= t.id %>"><%= t.name %></a></p>
 <% end %>
+
+<br>
+<a href='/logout'><button>Log Out</button></a>
+<br>
+<a href='/teams/new'><button>New Team</button></a>
