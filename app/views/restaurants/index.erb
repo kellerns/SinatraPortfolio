@@ -1,0 +1,8 @@
+<h1>See some previouisly reviewed restaurants:</h1>
+ <ul style='columns: 4'>
+  <% @restaurants.each do |r| %>
+    <li><a href='/restaurants/<%= r.id %>'><%= r.name %></a></li>
+  <% end %>
+</ul>
+<p>Don't see your restaurant?</p>
+<p><a href='/restaurants/new'>Add a restaurant!</a></p>

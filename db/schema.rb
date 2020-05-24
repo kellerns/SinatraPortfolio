@@ -11,23 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 5) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "restaurant_id"
-    t.integer "user_id"
     t.integer "rating"
     t.text    "content"
-    t.date    "date"
+    t.integer "restaurant_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "email"
     t.string "password_digest"
   end
 

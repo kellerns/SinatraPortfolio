@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
     @review = Review.find_by_id(params[:id])
     if @review
       erb :"reviews/show"
+    end
   end
 
   get '/reviews/new' do
