@@ -62,4 +62,13 @@ class TeamsController < ApplicationController
     end
   end
 
+  delete '/teams/:id' do
+    @team = Team.find_by_id(params[:id])
+    if @team
+      @team.delete
+    end
+      #redirect to the /teams route
+      redirect '/teams'
+  end
+
 end
