@@ -6,4 +6,5 @@ class TeamsController < ApplicationController
     erb :"teams/index"
   end
 
+
 end

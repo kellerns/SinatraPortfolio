@@ -2,7 +2,7 @@
   user = User.create(name: Faker::TvShows::SouthPark.character, email: Faker::Internet.email)
   2.times do
     user.teams.create(
-    name: Faker::TvShows::Seinfeld.business,
+    name: Faker::Team.unique.name,
     league: Faker::Movies::HarryPotter.house,
     quarterback: Faker::TvShows::GameOfThrones.character,
     running_back_one: Faker::Sports::Football.player,
