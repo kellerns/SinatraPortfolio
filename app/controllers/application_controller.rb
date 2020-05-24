@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
 
   get '/my_reviews' do
     @user = User.find(session[:user_id])
-    erb :user_reviews
+    erb :show
   end
 
   get "/login" do
@@ -69,7 +69,5 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
   end
-
-
 
 end

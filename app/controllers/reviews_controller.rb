@@ -1,4 +1,4 @@
-class ReviewsController < Sinatra::Base
+class ReviewsController < ApplicationController
 
   configure do
     set :public_folder, 'public'
@@ -17,15 +17,14 @@ class ReviewsController < Sinatra::Base
 
   post '/reviews' do
     @user = User.find(session[:user_id])
-    @city = City.create(name: params[:city][:name], state: params[:city][:state])
-    @restaurant = Restaurant.create(name: params[:restaurant][:name], city: @city)
+    @restaurant = Restaurant.create(name: params[:restaurant][:name])
     @review = Review.create(user: @user, date: Time.now, restaurant: @restaurant, rating: params[:review][:rating], content: params[:review][:content])
     redirect '/reviews'
   end
 
   get '/users/:user_id/reviews' do
     @user = User.find(session[:user_id])
-    erb :user_reviews
+    erb :show
   end
 
   get '/users/:user_id/reviews/:review_id/edit' do
