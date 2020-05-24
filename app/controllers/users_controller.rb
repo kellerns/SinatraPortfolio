@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     erb :index
   end
 
+
   get "/signup" do
     erb :signup
   end
