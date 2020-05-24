@@ -1,0 +1,45 @@
+<h2>Edit a Team</h2>
+<br>
+
+<form method="POST" action="/teams/<%= @team.id %>">
+  <input type="hidden" id="hidden" name="_method" value='PATCH'>
+
+  <label>Team Name:</label>
+  <input type="text" name="name" value=<%= @team.name %>>
+  <br>
+  <label>League Name:</label>
+  <input type="text" name="league" value=<%= @team.league %>>
+  <br>
+  <label>Quarterback:</label>
+  <input type="text" name="quarterback" value=<%= @team.quarterback %>>
+  <br>
+  <label>Running Back:</label>
+  <input type="text" name="running_back_one" value=<%= @team.running_back_one %>>
+  <br>
+  <label>Running Back:</label>
+  <input type="text" name="running_back_two" value=<%= @team.running_back_two %>>
+  <br>
+  <label>Wide Receiver:</label>
+  <input type="text" name="wide_receiver_one" value=<%= @team.wide_receiver_one %>>
+  <br>
+  <label>Wide Receiver:</label>
+  <input type="text" name="wide_receiver_two" value=<%= @team.wide_receiver_two %>>
+  <br>
+  <label>Tight End:</label>
+  <input type="text" name="tight_end" value=<%= @team.tight_end %>>
+  <br>
+  <label>Kicker:</label>
+  <input type="text" name="kicker" value=<%= @team.kicker %>>
+  <br>
+  <label>Defense:</label>
+  <input type="text" name="defense" value=<%= @team.defense %>>
+  <br>
+  <label>Wins:</label>
+  <input type="integer" name="wins" value=<%= @team.wins %>>
+  <br>
+  <label>Losses:</label>
+  <input type="integer" name="losses" value=<%= @team.losses %>>
+  <br>
+  <input type="submit">
+
+</form>
