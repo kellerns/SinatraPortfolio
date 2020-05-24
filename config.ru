@@ -1,12 +1,8 @@
-require_relative './config/environment'
-require_relative './app/controllers/reviews_controller'
-require_relative './app/controllers/users_controller'
-
 require './config/environment'
 
-# if ActiveRecord::Migrator.needs_migration?
-#   raise 'Migrations are pending. Run 'rake db:migrate' to resolve the issue.'
-# end
+if ActiveRecord::Migrator.needs_migration?
+  raise 'Migrations are pending. Run 'rake db:migrate' to resolve the issue.'
+end
 
 use Rack::MethodOverride
 use ReviewsController
