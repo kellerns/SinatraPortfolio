@@ -1,4 +1,4 @@
-3.times do
+10.times do
   user = User.create(name: Faker::TvShows::SouthPark.character, email: Faker::Internet.email)
   2.times do
     user.teams.create(
