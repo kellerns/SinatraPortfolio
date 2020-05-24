@@ -22,23 +22,12 @@ class SessionsController < ApplicationController
 
   helpers do
     def logged_in?
-      !!current_user
+      #double bang to return a boolean true
+      !!session[:user_id]
     end
 
     def current_user
-      User.find_by(id: session[:user_id])
-    end
-
-    def session_info
-      session
+      @user ||= User.find_by_id(session[:user_id]) if logged_in?
     end
   end
-
-
-
-
-
-
-
-
 end
