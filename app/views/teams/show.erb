@@ -2,17 +2,19 @@
 <html>
  <head>
   <meta charset="UTF-8">
-  <title><%= @team.name "(#{@team.wins}-#{@team.losses})" %></title>
+  <!-- <% wins = @team.wins.to_s %>
+  <% losses = @team.losses.to_s %> -->
+  <title><%= @team.name @team.wins - @team.losses %></title>
  </head>
  <body>
-   <h1>League Name: <%= "#{@team}" %></h2>
-   <h2>Quarterback: <%= "#{@team}" %></h2>
-   <h2>Running Back: <%= "#{@team}" %></h2>
-   <h2>Running Back: <%= "#{@team}" %></h2>
-   <h2>Wide Receiver: <%= "#{@team}" %></h2>
-   <h2>Wide Receiver: <%= "#{@team}" %></h2>
-   <h2>Tight End <%= "#{@team}" %></h2>
-   <h2>Kicker: <%= "#{@team}" %></h2>
-   <h2>Defense: <%= "#{@team}" %></h2>
+   <h1>League Name: <%= @team.league %></h2>
+   <h2>Quarterback: <%= @team.quarterback %></h2>
+   <h2>Running Back: <%= @team.running_back_one %></h2>
+   <h2>Running Back: <%= @team.running_back_two %></h2>
+   <h2>Wide Receiver: <%= @team.wide_receiver_one %></h2>
+   <h2>Wide Receiver: <%= @team.wide_receiver_two %></h2>
+   <h2>Tight End: <%= @team.tight_end %></h2>
+   <h2>Kicker: <%= @team.kicker %></h2>
+   <h2>Defense: <%= @team.defense %></h2>
  </body>
 </html>

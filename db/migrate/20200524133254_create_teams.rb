@@ -5,9 +5,9 @@ class CreateTeams < ActiveRecord::Migration
       t.string :league
       t.string :quarterback
       t.string :running_back_one
-      t.string :wide_reciever_one
+      t.string :wide_receiver_one
       t.string :running_back_two
-      t.string :wide_reciever_two
+      t.string :wide_receiver_two
       t.string :tight_end
       t.string :kicker
       t.string :defense
