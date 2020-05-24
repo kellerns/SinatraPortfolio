@@ -6,5 +6,14 @@ class TeamsController < ApplicationController
     erb :"teams/index"
   end
 
+  get'/teams/:id' do
+    @team = Team.find_by_id(params[:id])
+    if @team
+      erb :"teams/show"
+    else
+      #redirect to the /teams route
+      redirect '/teams'
+    end
+  end
 
 end
